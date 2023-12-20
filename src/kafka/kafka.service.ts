@@ -18,6 +18,7 @@ export class KafkaService implements OnModuleInit {
   onModuleInit() {
     this.consumer.on('message', (message: Message) => {
       console.log('Received message:', message.value);
+      
     });
 
     this.consumer.on('error', (err: any) => {
